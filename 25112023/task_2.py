@@ -22,7 +22,9 @@ kombinacje:
 
 
 def find_best_combination(data: list[int]) -> int:
-    # your code here
+    max_numbers = abs(data[0]), abs(data[1]), abs(data[2])
+
+    return sum(max_numbers)
     pass
 
 
