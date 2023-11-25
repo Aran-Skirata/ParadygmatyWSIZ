@@ -12,7 +12,9 @@ rozpłaszczyć (zachowując powierzchnię). Proszę sprawdzić czy wystarczy nam
 
 
 def cut_cakes(area: float, small_cakes: list[float]) -> bool:
-    # your code here
+    total_area_needed = sum(math.pi * r ** 2 for r in small_cakes)
+
+    return total_area_needed <= area
     pass
 
 
