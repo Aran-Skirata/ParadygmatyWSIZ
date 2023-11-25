@@ -1,3 +1,4 @@
+import re
 import unittest
 
 """
@@ -12,7 +13,10 @@ Shrug może być ewentualnie podzielony na dwie części, czyli np. "¯\_(ツ...
 
 
 def has_hiddden_shrug(line: str) -> bool:
-    # your code here
+    shrug = r'¯\\_.*\(ツ.*\)_/¯'
+    match = re.search(shrug,line)
+    return bool(match)
+
     pass
 
 

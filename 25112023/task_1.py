@@ -10,7 +10,13 @@ Funkcja powinna obliczyć na ile ryb z grupy drapieżnik może zapolować.
 
 
 def eat_small_fish(fishes: list[int], min_size: int, max_size: int) -> int:
-    # your code here
+    how_many = 0;
+    for x in fishes:
+        if min_size <= x <= max_size:
+            how_many += 1
+
+    return how_many
+
     pass
 
 
