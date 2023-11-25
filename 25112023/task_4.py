@@ -8,8 +8,8 @@ układamy z nich liczbę całkowitą. Funkcja ma podać jaką największą liczb
 
 
 def find_greatest_number(line: str) -> int:
-    # your code here
-    pass
+    nums = [char for char in line if char.isdigit()]
+    return int(''.join(sorted(nums, reverse=True)))
 
 
 class TestEngine4(unittest.TestCase):
