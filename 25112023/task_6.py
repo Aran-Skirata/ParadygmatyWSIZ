@@ -10,7 +10,16 @@ Napisać funkcję która sprawdzi, czy podana liczba `number` jest parzyście pi
 
 
 def is_even_beautiful(number: int) -> int:
-    pass
+    numbers = {}
+    strnumbers = str(number)
+
+    for strnumber in strnumbers:
+        numbers[strnumber] = numbers.get(strnumber, 0) + 1
+
+    for num in numbers.values():
+        if num != 2:
+            return 0
+    return 1
 
 
 class TestEngine6(unittest.TestCase):
